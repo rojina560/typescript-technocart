@@ -1,4 +1,5 @@
 {
+    // getter setter
     class BankAccount{
         id: number;
         name: string;
@@ -8,12 +9,19 @@
             this.name = name;
             this.balance = balance;
         }
-        getDeposite(amount:number){
-            return this.balance = this.balance + amount
+        // getter
+        set deposite(amount:number){
+             this.balance = this.balance + amount
         }  
+        get _balance (){
+            return this.balance
+        }
 }
  const poorManAccount = new BankAccount('rojina',8735,20)
-console.log( poorManAccount.getDeposite(40)); 
+poorManAccount.deposite = 70
+ const myBalance = poorManAccount._balance
+; 
+console.log(myBalance);
 
 
  ///
